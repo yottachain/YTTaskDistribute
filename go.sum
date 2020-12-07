@@ -269,8 +269,8 @@ github.com/wsddn/go-ecdh v0.0.0-20161211032359-48726bab9208/go.mod h1:IotVbo4F+m
 github.com/x-cray/logrus-prefixed-formatter v0.5.2/go.mod h1:2duySbKsL6M18s5GU7VPsoEPHyzalCE06qoARUCeBBE=
 github.com/yottachain/YTCrypto v0.0.0-20200122165219-0ea35dc29812 h1:XG9TtLosanLdwqSoporMr8OASUOjxuaj6cJDlut1c9s=
 github.com/yottachain/YTCrypto v0.0.0-20200122165219-0ea35dc29812/go.mod h1:jDJUVGeQ1clW7k9OTRBAFtCMwGs9B9fGQ9QY64SKqlk=
-github.com/yottachain/YTDataNode v0.0.0-20201127023210-2f5911b4da16 h1:VrQl4EFGOWbfGdaU/1JAbIJ2x30aAPElqCoiUEYcfBk=
-github.com/yottachain/YTDataNode v0.0.0-20201127023210-2f5911b4da16/go.mod h1:dWOatMXbOsapj3zaZ0lFku14Fb1M/kOyf1VsR1oG7WM=
+github.com/yottachain/YTDataNode v0.0.0-20201201092106-a7413c7653bb h1:yJP9YakMbJxpaR3LPEUYXYRFuWFoWGspuqsqADtyVkE=
+github.com/yottachain/YTDataNode v0.0.0-20201201092106-a7413c7653bb/go.mod h1:dWOatMXbOsapj3zaZ0lFku14Fb1M/kOyf1VsR1oG7WM=
 github.com/yottachain/YTElkProducer v0.0.7/go.mod h1:iVHdNfhwkGzmfPnImbJ9v+UDGCxEipDUKKWGoKkY4wY=
 github.com/yottachain/YTFS v0.0.0-20201117121403-2a47bbc4d6a7/go.mod h1:1SOBbLZ9c3H9dt7gpVU+iiXM1AEnZOMPwVxKFc7Ja4k=
 github.com/yottachain/YTHost v1.0.2-0.20201113085139-df598f679820 h1:3xfSmYRquWBQVXWzgfU9rEiY8rPVVkvQd+nTj/pxBJU=

@@ -7,6 +7,6 @@ require (
 	github.com/libp2p/go-libp2p-core v0.7.0
 	github.com/multiformats/go-multiaddr v0.2.2
 	github.com/sirupsen/logrus v1.7.0
-	github.com/yottachain/YTDataNode v0.0.0-20201127023210-2f5911b4da16
+	github.com/yottachain/YTDataNode v0.0.0-20201201092106-a7413c7653bb
 	github.com/yottachain/YTHost v1.0.2-0.20201113085139-df598f679820
 )

@@ -59,7 +59,7 @@ func addrsToMaddrs(addrs [] string) []multiaddr.Multiaddr {
 
 	var mas = make([]multiaddr.Multiaddr, len(addrs))
 	for k, v := range addrs {
-		logrus.Printf("add:%s", v)
+		//logrus.Printf("add:%s", v)
 		ma, err := multiaddr.NewMultiaddr(v)
 		if err != nil {
 			logrus.Infof("transform error:%s", err.Error())
@@ -73,6 +73,7 @@ func addrsToMaddrs(addrs [] string) []multiaddr.Multiaddr {
 
 func GetDnlist(path string) [] *AddInfo {
 	addlist := make([] *AddInfo, 0)
+	var Map sync.Map
 
 	f, err := os.Open(path)
 	if err != nil {
@@ -96,20 +97,27 @@ func GetDnlist(path string) [] *AddInfo {
 		}
 
 		Id, _ := strconv.Atoi(info[0])
-		log.Printf("miner id: %d", Id)
+		_, ok := Map.Load(Id)
+		if ok {
+			continue
+		}else {
+			Map.Store(Id, Id)
+		}
+
+		//log.Printf("miner id: %d", Id)
 		pId, _ := peer.Decode(info[1])
-		log.Printf("peer id: %s", pId)
+		//log.Printf("peer id: %s", pId)
 		addrsLen := len(info[2])
 		addrsinfo := info[2][1:addrsLen-1]
-		logrus.Printf("addrsinfo:%s", addrsinfo)
+		//logrus.Printf("addrsinfo:%s", addrsinfo)
 		adds := strings.Split(addrsinfo, ",")
-		logrus.Printf("adds:%s", adds)
+		//logrus.Printf("adds:%s", adds)
 		var addrs []string
 		for _, v := range adds {
 			addr := v[1:len(v)-1]
 			addrs = append(addrs, addr)
 		}
-		logrus.Printf("addrs:%s", addrs)
+		//logrus.Printf("addrs:%s", addrs)
 		add := &AddInfo{Id, pId, addrsToMaddrs(addrs), addrs}
 		addlist = append(addlist, add)
 	}
